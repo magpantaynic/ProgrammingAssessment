@@ -1,7 +1,7 @@
-# ProgrammingAssessment
+# ProgrammingAssessment1
 
 
-Rock, Paper, Scissors
-Dog Genetics
-Healthy Hearts
-Summative Sums
+-Rock, Paper, Scissors
+-Dog Genetics
+-Healthy Hearts
+-Summative Sums
