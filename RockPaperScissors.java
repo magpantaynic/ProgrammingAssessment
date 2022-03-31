@@ -40,7 +40,7 @@
 */
 
 import java.util.Scanner;
-import java.util.Scanner;
+import java.util.Random;
 
 
 
@@ -52,8 +52,16 @@ public class RockPaperScissors {
 		int Rock = 1;
 		int Paper = 2;
 		int Scissors = 3;
+
 		int compChoice;
-		int userChoice = 0;
+		int userChoice = 0; //userChoice to decide on rounds or to replay game
+		int userPicks = 0; //userPicks to choose between RPS
+		int compPicks = 0;
+
+		int Rounds = 1;
+		int userWin = 0;
+		int compWin = 0;
+		int tie = 0;
 
 		Scanner input = new Scanner(System.in);
 		Random randomizer = new Random();
@@ -62,29 +70,100 @@ public class RockPaperScissors {
 
 		System.out.println("How many rounds do you want to play?");
 		// Minimum of 1 round, max of 10 rounds
-		userChoice = input.nextLine();
+		userChoice = input.nextInt();
 
-		//	if (input > 10 || input < 1)
-		/*	{
-
-				System.out.println("Error, number of rounds chosen is out of range");
-				return; <-- program should quit at this point
-			}
-			else if (input == 1 || input >= 10 )
+			if (userChoice > 10 || userChoice < 1)
 			{
-					
 
+				System.out.println("Error, number of rounds chosen is out of range. Please choose between 1-10");
+				return; //program should quit at this point
+			}
+			else if (userChoice == 1 || userChoice <= 10 )
+			{
+
+				do
+				{
+
+					System.out.println("Enter your first pick: 1-Rock, 2-Paper, 3-Scissors: ")
+					userPicks = input.nextInt();
+					compChoice = randomizer.nextInt(3)+1;
+
+
+					//Game process
+
+					if(userPicks == Rock && compPicks == Scissors)
+					{
+
+						System.out.println("User chose rock, computer chose Scissors. User wins");
+						userWin++;
+					}
+					else if (userPicks == Rock && compPicks == Paper)
+					{
+						System.out.println("Computer chose Paper, user chose Rock. Computer wins");
+						compWin++;
+
+					}
+					else if (userPicks == Rock && compPicks == Rock)
+					{
+						System.out.println("Both User & Computer chose Rock. Tie");
+						tie++;
+					}
+					if (userPicks == Paper && compPicks == Rock)
+					{
+						System.out.println("User chose Paper, computer chose rock. User wins");
+						userWin++;
+					}
+					else if (userPicks == Paper && compPicks == Scissors)
+					{
+						System.out.println("Computer chose Scissors, user chose Paper. Computer wins");
+						compWin++;
+					}
+					else if (userPicks == Paper && compPicks == Paper )
+					{
+						System.out.println("Both User & Computer chose Scissors. Tie");
+						tie++;
+					}
+					if (userPicks == Scissors && compPicks == Paper)
+					{
+						System.out.println("User chose Scissors, computer chose Paper. User wins");
+						userWin++;
+					}
+					else if (userPicks == Scissors && compPicks == Rock )
+					{
+						System.out.println("Computer chose rock, user chose Scissors. Computer wins");
+						compWin++;
+					}
+					else if (userPicks == Scissors && compPicks == Scissors )
+					{
+						System.out.println("Both User & Computer chose Scissors. Tie");
+						tie++;
+					}
+					Rounds++;					
+
+
+				} while (Rounds <= userChoice)
+
+				
+				if(userWin > compWin)
+				{
+					System.out.println("User has won the game!");
+				}
+				else if(userWin < compWin)
+				{
+					System.out.println("Computer has won the game!");
+
+				}
+				else if(userWin = compWin)
+				{
+					System.out.println("It's a tie!");
+				}
+
+				
+				}
 			}
 
-		*/
 
-
-		/* Pseudocode for the process of the game
-
-		if(user )
-
-
-		*/
+/*
 
 
 		// Print lines to include in the code for later
@@ -106,9 +185,4 @@ public class RockPaperScissors {
 		System.out.println("Computer chose Scissors, user chose Paper. Computer wins");
 		System.out.println("Both User & Computer chose Scissors. Tie");
 
-
-
-	}
-
-
-}
+*/
