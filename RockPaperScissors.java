@@ -84,56 +84,56 @@ public class RockPaperScissors {
 				do
 				{
 
-					System.out.println("Enter your first pick: 1-Rock, 2-Paper, 3-Scissors: ")
+					System.out.println("Enter your first pick: 1-Rock, 2-Paper, 3-Scissors: ");
 					userPicks = input.nextInt();
 					compChoice = randomizer.nextInt(3)+1;
 
 
 					//Game process
 
-					if(userPicks == Rock && compPicks == Scissors)
+					if(userPicks == Rock && compChoice == Scissors)
 					{
 
 						System.out.println("User chose rock, computer chose Scissors. User wins");
 						userWin++;
 					}
-					else if (userPicks == Rock && compPicks == Paper)
+					else if (userPicks == Rock && compChoice == Paper)
 					{
 						System.out.println("Computer chose Paper, user chose Rock. Computer wins");
 						compWin++;
 
 					}
-					else if (userPicks == Rock && compPicks == Rock)
+					else if (userPicks == Rock && compChoice == Rock)
 					{
 						System.out.println("Both User & Computer chose Rock. Tie");
 						tie++;
 					}
-					if (userPicks == Paper && compPicks == Rock)
+					if (userPicks == Paper && compChoice == Rock)
 					{
 						System.out.println("User chose Paper, computer chose rock. User wins");
 						userWin++;
 					}
-					else if (userPicks == Paper && compPicks == Scissors)
+					else if (userPicks == Paper && compChoice == Scissors)
 					{
 						System.out.println("Computer chose Scissors, user chose Paper. Computer wins");
 						compWin++;
 					}
-					else if (userPicks == Paper && compPicks == Paper )
+					else if (userPicks == Paper && compChoice == Paper )
 					{
 						System.out.println("Both User & Computer chose Scissors. Tie");
 						tie++;
 					}
-					if (userPicks == Scissors && compPicks == Paper)
+					if (userPicks == Scissors && compChoice == Paper)
 					{
 						System.out.println("User chose Scissors, computer chose Paper. User wins");
 						userWin++;
 					}
-					else if (userPicks == Scissors && compPicks == Rock )
+					else if (userPicks == Scissors && compChoice == Rock )
 					{
 						System.out.println("Computer chose rock, user chose Scissors. Computer wins");
 						compWin++;
 					}
-					else if (userPicks == Scissors && compPicks == Scissors )
+					else if (userPicks == Scissors && compChoice == Scissors )
 					{
 						System.out.println("Both User & Computer chose Scissors. Tie");
 						tie++;
@@ -141,7 +141,7 @@ public class RockPaperScissors {
 					Rounds++;					
 
 
-				} while (Rounds <= userChoice)
+				} while (Rounds <= userChoice);
 
 				
 				if(userWin > compWin)
@@ -153,7 +153,7 @@ public class RockPaperScissors {
 					System.out.println("Computer has won the game!");
 
 				}
-				else if(userWin = compWin)
+				else if(userWin == compWin)
 				{
 					System.out.println("It's a tie!");
 				}
@@ -161,6 +161,7 @@ public class RockPaperScissors {
 				
 				}
 			}
+		}
 
 
 /*
