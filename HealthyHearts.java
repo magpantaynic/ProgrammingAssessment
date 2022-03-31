@@ -15,8 +15,6 @@
 
 */
 
-
-
 import java.util.Scanner;
 import java.util.Random;
 
@@ -26,12 +24,23 @@ public class HealthyHearts{
 
 	public static void main(String[] args)
 	{
-		
+
 		Scanner input = new Scanner(System.in);
 		Random randomizer = new Random();
 
+		
+		int maxHR = 220 - age;
+		int targetHR1 = maxHR * 0.5;
+		int targetHR2 =  maxHR * 0.85;
+
+
+		System.out.println("How old are you?: ");
+		int age = input.nextInt();
+
+
+		System.out.println("Your max heart rate should be " + maxHR + " beats per minute");
+		System.out.println("Your target HR Zone is " + targetHR1 + " - " targetHR2 + " beats per minute." );
+
 	}
-
-
 
 }
