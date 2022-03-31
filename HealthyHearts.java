@@ -30,9 +30,9 @@ public class HealthyHearts{
 		System.out.println("How old are you?: ");
 		int age = input.nextInt();
 
-		int maxHR = 220 - age;
-		int targetHR1 = maxHR * 0.5;
-		int targetHR2 =  maxHR * 0.85;
+		double maxHR = 220 - age;
+		double targetHR1 = maxHR * 0.5;
+		double targetHR2 =  maxHR * 0.85;
 
 		System.out.println("Your max heart rate should be " + maxHR + " beats per minute");
 		System.out.println("Your target HR Zone is " + targetHR1 + " - " targetHR2 + " beats per minute." );
