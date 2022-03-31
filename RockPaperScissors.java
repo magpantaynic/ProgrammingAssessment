@@ -89,7 +89,7 @@ public class RockPaperScissors {
 					compChoice = randomizer.nextInt(3)+1;
 
 
-					//Game process
+					//Game process where there should be 9 cases of what could happen
 
 					if(userPicks == Rock && compChoice == Scissors)
 					{
@@ -143,7 +143,7 @@ public class RockPaperScissors {
 
 				} while (Rounds <= userChoice);
 
-				
+				// Determine who the winner is
 				if(userWin > compWin)
 				{
 					System.out.println("User has won the game!");
